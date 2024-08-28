@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import {create, /*/getAll/*/ getAll, getTarefa} from '../controllers/tarefaController.js'
+import {create, /*/getAll/*/ getAll, getTarefa, updateTarefa} from '../controllers/tarefaController.js'
 
 const router = Router()
 
@@ -8,5 +8,6 @@ const router = Router()
 router.post("/", create)
 router.get("/",getAll)
 router.get("/:id",getTarefa )
+router.put("/:id", updateTarefa)
 
 export default router; 
